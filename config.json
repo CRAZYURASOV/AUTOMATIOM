@@ -3,7 +3,7 @@
   "memory": {"warn": 70, "crit": 90},
 
   "disk": {
-    "path": "C:/",
+    "path": "/",
     "warn": 15,
     "crit": 5
   },
