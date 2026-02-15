@@ -1,0 +1,44 @@
+[
+    {
+        "ts": "2026-02-15T22:27:40",
+        "cpu": {
+            "Value": 4.8,
+            "status": "OK"
+        },
+        "memory": {
+            "Value": 41.6,
+            "status": "OK"
+        },
+        "disk": {
+            "free_percent mb": 108682.166015625,
+            "status": "CRITICAL"
+        },
+        "logs": {
+            "Errors": 0,
+            "status": "ERROR - [WinError 2] Не удается найти указанный файл: 'app.log'"
+        },
+        "http": {
+            "time_ms": 795.09,
+            "status_ms": null,
+            "status": "OK"
+        },
+        "tcp": {
+            "initial": {
+                "status": "DOWN",
+                "error": "timed out"
+            },
+            "action": "RESTART",
+            "restart": {
+                "ok": true,
+                "returncode": 0,
+                "output": "restart tcp"
+            },
+            "final": {
+                "status": "DOWN",
+                "error": "timed out"
+            },
+            "status": "CRITICAL"
+        },
+        "alls": "CRITICAL"
+    }
+]

@@ -1,0 +1,29 @@
+name: Check Script
+
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+           ["pypy3.10", "3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check Py ${{matrix.python-version}}
+        uses: actions/checkout@v5
+        with:
+          python-version: ${{matrix.python-version}}
+      - name: Compile PY
+        run: python -m py_compile main.py
+
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        name: action build ubuntu
+      -  run: docker built -t py-script:1.0 .
+
+

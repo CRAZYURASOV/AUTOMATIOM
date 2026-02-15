@@ -1,0 +1,38 @@
+{
+  "cpu": {"warn": 70, "crit": 90},
+  "memory": {"warn": 70, "crit": 90},
+
+  "disk": {
+    "path": "C:/",
+    "warn": 15,
+    "crit": 5
+  },
+
+  "logs": {
+    "file": "app.log",
+    "last_n": 200,
+    "max_mb": 50
+  },
+
+  "http": {
+    "url": "https://ya.ru",
+    "timeout": 3,
+    "warn_ms": 800
+  },
+
+  "tcp": {
+    "host": "localhost",
+    "port": 80,
+    "timeout": 1,
+    "restart_cmd": "echo restart tcp"
+  },
+
+  "process": {
+    "name": "python",
+    "restart_cmd": "echo restart process"
+  },
+
+  "global": {
+    "dry_run": false
+  }
+}
