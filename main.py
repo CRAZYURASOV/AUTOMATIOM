@@ -44,7 +44,7 @@ def check_disk_usage(cnf: dict):
         path = cnf['path']
 
         disk_used= psutil.disk_usage(path).percent
-        free = psutil.disk_usage(path).free / 1024 / 1024 / 8
+        free = psutil.disk_usage(path).free / 1024 / 1024
 
         if disk_used >= crit:
             status = 'CRITICAL'
